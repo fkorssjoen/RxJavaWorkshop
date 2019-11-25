@@ -6,8 +6,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ItemResponse {
   private String id;
+
   @JsonProperty("site_id")
   private String siteId;
+
   private String title;
 
   public String getId() {

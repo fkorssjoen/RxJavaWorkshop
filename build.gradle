@@ -9,13 +9,23 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    maven { url "http://git.ml.com/nexus/content/repositories/releases" }
+    maven { url "http://repo.maven.apache.org/maven2" }
+    maven { url "http://git.ml.com:8081/nexus/content/repositories/releases" }
+    maven { url "http://git.ml.com:8081/nexus/content/repositories/MLGrailsPlugins" }
+    maven { url "http://maven.melicloud.com/nexus/content/repositories/releases" }
+    maven { url "http://git.ml.com/nexus/content/groups/Arquitectura" }
 }
 
 dependencies {
+    compile 'javax.inject:javax.inject:1'
     compile 'io.reactivex:rxjava:1.3.8'
     compile 'io.reactivex:rxjava-debug:1.0.3'
     compile("com.fasterxml.jackson.core:jackson-databind")
+    compile "org.mockito:mockito-core:2.10.0"
     compile group: 'com.squareup.okhttp3', name: 'okhttp', version: '3.2.0'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.0.1'
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile "org.mockito:mockito-core:2.10.0"
+    testCompile "org.powermock:powermock-api-mockito2:2.0.0-beta.5"
 }

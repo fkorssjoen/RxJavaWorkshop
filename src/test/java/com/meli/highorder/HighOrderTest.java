@@ -29,4 +29,23 @@ public class HighOrderTest {
     Assert.assertEquals(2, newIntegerList.get(0).intValue());
   }
 
+
+  @Test
+  public void createStringNewListGreaterThan2() {
+    List<Integer> integerList = Arrays.asList(1, 2, 3, 4, 5);
+    List<String> newStringList = HighOrder.newStringList(integerList, 2);
+
+    List<String> expected = Arrays.asList("2", "3", "4", "5");
+    Assert.assertEquals(expected, newStringList);
+  }
+
+  @Test
+  public void testFactorialOf6() {
+    List<Integer> integerList = Arrays.asList(1, 2, 3, 4, 5, 6);
+    Integer factorial = HighOrder.factorial(integerList);
+    Integer expected = 720;
+
+    Assert.assertEquals(expected, factorial);
+  }
+
 }
